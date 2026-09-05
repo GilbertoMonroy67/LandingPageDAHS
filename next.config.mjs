@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  trailingSlash: true,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+
   images: {
     unoptimized: true,
   },
-}
 
-export default nextConfig
+  basePath: process.env.NODE_ENV === 'production' ? '/LandingPageDAHS' : '',
+};
+
+export default nextConfig;
